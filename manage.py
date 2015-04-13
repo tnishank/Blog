@@ -30,7 +30,6 @@ def deploy():
 
     # migrate database to latest revision
     upgrade()
-    db.create_all()
 
     # create user roles
     Role.insert_roles()
