@@ -12,7 +12,7 @@ class Permission:
     MODERATE_COMMENTS = 0x08
     ADMINISTER = 0x80
 
-#Every roles have a set of permissions but for Now we have three 
+#Every roles have a set of permissions but for Now we have three roles User, Administrator, AnonymousUser
 class Role(db.Model):
     __tablename__ = 'roles'
     id = db.Column(db.Integer, primary_key=True)
