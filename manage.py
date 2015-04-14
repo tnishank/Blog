@@ -28,11 +28,14 @@ def deploy():
     from flask.ext.migrate import upgrade
     from app.models import Role, User
 
+    #creation of database 
+    db.create_all()
+
+     # create user roles
+    Role.insert_roles()
+    
     # migrate database to latest revision
     upgrade()
-
-    # create user roles
-    Role.insert_roles()
 
 
 if __name__ == '__main__':
